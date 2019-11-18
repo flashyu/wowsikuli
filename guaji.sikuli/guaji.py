@@ -3,7 +3,6 @@ def login():
     if not exists("1574095716601.png"):
         print 'no login icon';
         openApp('D:\Battle.net\Battle.net.exe');
-        sleep(10);
     print 'login icon';
     wait("1574095716601.png", 60);
     click("1574095716601.png",20);
