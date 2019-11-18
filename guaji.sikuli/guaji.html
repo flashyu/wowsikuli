@@ -70,58 +70,42 @@
 <h2>guaji.sikuli</h2> <a href="guaji.zip">(Download this script)</a>
 </div>
 <pre class="sikuli-code">
-<span class="kw">import</span> time
+<span class="kw">def</span> login():
+    <span class="kw">print</span> <span class="str">'login'</span>;
+    <span class="kw">if</span> <span class="kw">not</span> exists(<img src="1574095716601.png" />):
+        <span class="kw">print</span> <span class="str">'no login icon'</span>;
+        openApp(<span class="str">'D:\Battle.net\Battle.net.exe'</span>);
+        <span class="cmt">#sleep(20);</span>
+    <span class="kw">print</span> <span class="str">'login icon'</span>;
+    <span class="skw">click</span>(<img src="1574095716601.png" />, <span class="dig">60</span>);
+    <span class="skw">sleep</span>(<span class="dig">20</span>);
+    <span class="skw">click</span>(<img src="1574096724785.png" />, <span class="dig">60</span>)
+    <span class="skw">sleep</span>(<span class="dig">20</span>);
+    <span class="kw">return</span>;
 
-<span class="kw">import</span> random
+<span class="kw">def</span> logout():
+    <span class="kw">print</span> <span class="str">'logout'</span>;
+    <span class="skw">type</span>(Key.ESC);
+    <span class="skw">sleep</span>(<span class="dig">1</span>);
+    <span class="skw">type</span>(Key.ESC);
+    <span class="skw">sleep</span>(<span class="dig">1</span>);
+    <span class="skw">type</span>(Key.ESC);
+    <span class="skw">sleep</span>(<span class="dig">3</span>);
+    <span class="kw">return</span>;
 
-<span class="cmt">#第一步 1920*1080 缩放1</span>
-<span class="cmt">#第二步 设置英语打字</span>
-i = <span class="dig">0</span>;
+<span class="kw">def</span> guaji():
+    <span class="kw">print</span> <span class="str">'run'</span>;
+    <span class="skw">type</span>(Key.SPACE);
+    <span class="skw">sleep</span>(<span class="dig">3</span>);
+    <span class="kw">return</span>;
+
 <span class="kw">while</span> True:
-
-    <span class="kw">if</span> exists(<img src="1566911317174.png" />,<span class="dig">0</span>):
-        <span class="skw">doubleClick</span>(<img src="1566911337994.png" />);
-        time.<span class="skw">sleep</span>(<span class="dig">20</span>);
-
-    <span class="kw">elif</span> exists(<img src="1566914662533.png" />,<span class="dig">0</span>):
-        <span class="skw">click</span>(Location(<span class="dig">10</span>, <span class="dig">10</span>));
-        time.<span class="skw">sleep</span>(<span class="dig">20</span>);
-
-    <span class="kw">elif</span> exists( <img src="1566911490504.png" />):
-        <span class="skw">doubleClick</span>(<img src="1566911527418.png" />);
-    <span class="cmt">#elif exists( "1566914519679.png",0):</span>
-    <span class="cmt">#    doubleClick("1566914526618.png");    </span>
-        time.<span class="skw">sleep</span>(<span class="dig">20</span>);
-    <span class="kw">elif</span> exists(<img src="1566912124291.png" />,<span class="dig">0</span>):
-        <span class="skw">click</span>(<img src="1566912173905.png" />);
-        time.<span class="skw">sleep</span>(<span class="dig">20</span>);
-    <span class="kw">elif</span> exists(<img src="1566912201827.png" />,<span class="dig">0</span>):
-        <span class="skw">click</span>(Location(<span class="dig">886</span>, <span class="dig">567</span>));
-        time.<span class="skw">sleep</span>(<span class="dig">1</span>);
-        <span class="skw">click</span>(Location(<span class="dig">886</span>, <span class="dig">567</span>));
-        time.<span class="skw">sleep</span>(<span class="dig">1</span>);
-        <span class="skw">type</span>(<span class="str">"账号"</span>);
-        time.<span class="skw">sleep</span>(<span class="dig">1</span>);
-        <span class="skw">click</span>(Location(<span class="dig">884</span>, <span class="dig">667</span>));
-        time.<span class="skw">sleep</span>(<span class="dig">1</span>);
-        <span class="skw">type</span>(<span class="str">"密码"</span>);
-        time.<span class="skw">sleep</span>(<span class="dig">1</span>);
-        <span class="skw">click</span>(Location(<span class="dig">969</span>, <span class="dig">760</span>));
-        time.<span class="skw">sleep</span>(<span class="dig">10</span>);
+    <span class="kw">if</span> exists(<img src="1574096829952.png" />,<span class="dig">3</span>):
+        guaji();
+    <span class="kw">elif</span> exists(<img src="1574095824831.png" />,<span class="dig">3</span>):
+        logout();
     <span class="kw">else</span>:
-        time.<span class="skw">sleep</span>(random.randrange(<span class="dig">40</span>,<span class="dig">80</span>));
-        <span class="kw">print</span> <span class="str">"我擦"</span>
-        <span class="skw">click</span>(Location(<span class="dig">10</span>, <span class="dig">10</span>));
-        time.<span class="skw">sleep</span>(<span class="dig">1</span>);
-        <span class="kw">if</span>(i%<span class="dig">2</span>==<span class="dig">0</span>):
-            keyDown(Key.UP)
-            time.<span class="skw">sleep</span>(<span class="dig">0.5</span>);
-            keyUp(Key.UP)
-        <span class="kw">else</span>:
-            keyDown(Key.DOWN)
-            time.<span class="skw">sleep</span>(<span class="dig">0.5</span>);
-            keyUp(Key.DOWN)
-        i=i+<span class="dig">1</span>;
+        login();
 </pre>
 </body>
 </html>

@@ -1,52 +1,36 @@
-import time
+def login():
+    print 'login';
+    if not exists("1574095716601.png"):
+        print 'no login icon';
+        openApp('D:\Battle.net\Battle.net.exe');
+        #sleep(20);
+    print 'login icon';
+    click("1574095716601.png", 60);
+    sleep(20);
+    click("1574096724785.png", 60)
+    sleep(20);
+    return;
 
-import random
+def logout():
+    print 'logout';
+    type(Key.ESC);
+    sleep(1);
+    type(Key.ESC);
+    sleep(1);
+    type(Key.ESC);
+    sleep(3);
+    return;
 
-#第一步 1920*1080 缩放1
-#第二步 设置英语打字
-i = 0;
+def guaji():
+    print 'run';
+    type(Key.SPACE);
+    sleep(3);
+    return;
+    
 while True:
-    
-    if exists("1566911317174.png",0):
-        doubleClick("1566911337994.png");
-        time.sleep(20);
-
-    elif exists("1566914662533.png",0):
-        click(Location(10, 10));
-        time.sleep(20);
-    
-    elif exists( "1566911490504.png"):
-        doubleClick("1566911527418.png");
-    #elif exists( "1566914519679.png",0):
-    #    doubleClick("1566914526618.png");    
-        time.sleep(20);
-    elif exists("1566912124291.png",0):
-        click("1566912173905.png");
-        time.sleep(20);
-    elif exists("1566912201827.png",0):
-        click(Location(886, 567));
-        time.sleep(1);
-        click(Location(886, 567));
-        time.sleep(1);
-        type("账号");
-        time.sleep(1);
-        click(Location(884, 667));
-        time.sleep(1);
-        type("密码");
-        time.sleep(1);
-        click(Location(969, 760));
-        time.sleep(10);
+    if exists("1574096829952.png",3):
+        guaji();
+    elif exists("1574095824831.png",3):
+        logout();
     else:
-        time.sleep(random.randrange(40,80));
-        print "我擦"
-        click(Location(10, 10));
-        time.sleep(1);
-        if(i%2==0): 
-            keyDown(Key.UP)
-            time.sleep(0.5);
-            keyUp(Key.UP)
-        else:
-            keyDown(Key.DOWN)
-            time.sleep(0.5);
-            keyUp(Key.DOWN)
-        i=i+1;
+        login();
