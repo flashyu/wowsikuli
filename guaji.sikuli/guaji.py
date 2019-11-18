@@ -9,6 +9,8 @@ def login():
     click("1574095716601.png",20);
     wait("1574096724785.png", 60);
     click("1574096724785.png",20);
+    wait("1574096829952.png",60);
+    print 'login success';
     return;
 
 def logout():
