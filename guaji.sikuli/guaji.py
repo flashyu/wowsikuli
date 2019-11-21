@@ -14,6 +14,7 @@ def login():
 
 def logout():
     print 'logout';
+    clcik(Pattern("1574095824831.png").targetOffset(2,37),3);
     type(Key.ESC);
     sleep(1);
     type(Key.ESC);
