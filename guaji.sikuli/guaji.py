@@ -8,7 +8,7 @@ def login():
     print 'login';
     if not exists("1574095716601.png"):
         print 'no login icon';
-        openApp('D:\Battle.net\Battle.net.exe');
+        openApp('D:\wow\Battle.net\Battle.net.exe');
     print 'login icon';
     exists("1574095716601.png", 60);
     click("1574095716601.png", 20);
@@ -18,7 +18,9 @@ def login():
 
 def logout():
     print 'logout';
-    click("1574095824831.png");
+    exists("1574095824831.png");
+    sleep(1);
+    type(Key.ESC);
     sleep(1);
     type(Key.ESC);
     sleep(1);
