@@ -1,5 +1,4 @@
 def gameStart():
-    exists("1574096724785.png", 60);
     click("1574096724785.png", 20);
     exists("1574096829952.png",60);
     return;
@@ -23,15 +22,13 @@ def logout():
     type(Key.ESC);
     sleep(1);
     type(Key.ESC);
-    sleep(1);
-    type(Key.ESC);
     sleep(3);
     return;
 
 def guaji():
     print 'run';
     type(Key.SPACE);
-    sleep(3);
+    sleep(5);
     return;
     
 while True:
