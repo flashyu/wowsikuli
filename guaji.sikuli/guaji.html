@@ -71,20 +71,25 @@
 </div>
 <pre class="sikuli-code">
 <span class="kw">def</span> gameStart():
+    <span class="kw">print</span> <span class="str">'game start'</span>;
     <span class="skw">click</span>(<img src="1574096724785.png" />, <span class="dig">20</span>);
-    exists(<img src="1574096829952.png" />,<span class="dig">60</span>);
+    <span class="skw">sleep</span>(<span class="dig">60</span>);
     <span class="kw">return</span>;
 
 <span class="kw">def</span> login():
     <span class="kw">print</span> <span class="str">'login'</span>;
-    <span class="kw">if</span> <span class="kw">not</span> exists(<img src="1574095716601.png" />):
+    <span class="kw">if</span> <span class="kw">not</span> exists(<img src="1574095716601.png" />, <span class="dig">10</span>):
         <span class="kw">print</span> <span class="str">'no login icon'</span>;
         openApp(<span class="str">'D:\wow\Battle.net\Battle.net.exe'</span>);
-    <span class="kw">print</span> <span class="str">'login icon'</span>;
-    exists(<img src="1574095716601.png" />, <span class="dig">60</span>);
+        <span class="skw">sleep</span>(<span class="dig">20</span>);
     <span class="skw">click</span>(<img src="1574095716601.png" />, <span class="dig">20</span>);
-    exists(<img src="1574096724785.png" />, <span class="dig">60</span>);
     <span class="kw">print</span> <span class="str">'login success'</span>;
+    <span class="kw">return</span>;
+
+<span class="kw">def</span> reconnect():
+    <span class="kw">print</span> <span class="str">'reconnect'</span>;
+    <span class="skw">click</span>(<img src="1665894407351.png" />, <span class="dig">5</span>);
+    <span class="skw">sleep</span>(<span class="dig">20</span>);
     <span class="kw">return</span>;
 
 <span class="kw">def</span> logout():
@@ -100,19 +105,21 @@
 <span class="kw">def</span> guaji():
     <span class="kw">print</span> <span class="str">'run'</span>;
     <span class="skw">type</span>(Key.SPACE);
-    <span class="skw">sleep</span>(<span class="dig">5</span>);
+    <span class="skw">sleep</span>(<span class="dig">10</span>);
     <span class="kw">return</span>;
 
 <span class="kw">while</span> True:
     <span class="kw">if</span> exists(<img src="1574096829952.png" />, <span class="dig">3</span>):
         guaji();
-    <span class="kw">elif</span> exists(<img src="1574096724785.png" />, <span class="dig">3</span>):
-        gameStart();
-    <span class="kw">elif</span> exists(<img src="1574095824831.png" />, <span class="dig">3</span>):
-        logout();
-    <span class="kw">elif</span> exists(<img src="1574596348467.png" />, <span class="dig">3</span>):
-        <span class="skw">sleep</span>(<span class="dig">3</span>);
+    <span class="kw">elif</span> exists(<img src="1574596348467.png" />, <span class="dig">5</span>):
+        <span class="skw">sleep</span>(<span class="dig">30</span>);
         <span class="kw">print</span>(<span class="str">'in the line...'</span>);
+    <span class="kw">elif</span> exists(<img src="1574096724785.png" />, <span class="dig">5</span>):
+        gameStart();
+    <span class="kw">elif</span> exists(<img src="1574095824831.png" />, <span class="dig">5</span>):
+        logout();
+    <span class="kw">elif</span> exists(<img src="1665894407351.png" />, <span class="dig">5</span>):
+        reconnect();
     <span class="kw">else</span>:
         login();
 </pre>
