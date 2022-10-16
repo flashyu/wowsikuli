@@ -89,12 +89,14 @@
 <span class="kw">def</span> reconnect():
     <span class="kw">print</span> <span class="str">'reconnect'</span>;
     <span class="skw">click</span>(<img src="1665894407351.png" />, <span class="dig">5</span>);
-    <span class="skw">sleep</span>(<span class="dig">20</span>);
+    <span class="skw">sleep</span>(<span class="dig">10</span>);
     <span class="kw">return</span>;
 
 <span class="kw">def</span> logout():
     <span class="kw">print</span> <span class="str">'logout'</span>;
     exists(<img src="1574095824831.png" />);
+    <span class="skw">sleep</span>(<span class="dig">1</span>);
+    <span class="skw">type</span>(Key.ESC);
     <span class="skw">sleep</span>(<span class="dig">1</span>);
     <span class="skw">type</span>(Key.ESC);
     <span class="skw">sleep</span>(<span class="dig">1</span>);
@@ -109,7 +111,7 @@
     <span class="kw">return</span>;
 
 <span class="kw">while</span> True:
-    <span class="kw">if</span> exists(<img src="1574096829952.png" />, <span class="dig">3</span>):
+    <span class="kw">if</span> exists(<img src="1574096829952.png" />, <span class="dig">5</span>):
         guaji();
     <span class="kw">elif</span> exists(<img src="1574596348467.png" />, <span class="dig">5</span>):
         <span class="skw">sleep</span>(<span class="dig">30</span>);

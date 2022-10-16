@@ -17,12 +17,14 @@ def login():
 def reconnect():
     print 'reconnect';
     click("1665894407351.png", 5);
-    sleep(20);
+    sleep(10);
     return;
 
 def logout():
     print 'logout';
     exists("1574095824831.png");
+    sleep(1);
+    type(Key.ESC);
     sleep(1);
     type(Key.ESC);
     sleep(1);
@@ -37,7 +39,7 @@ def guaji():
     return;
     
 while True:
-    if exists("1574096829952.png", 3):
+    if exists("1574096829952.png", 5):
         guaji();
     elif exists("1574596348467.png", 5):
         sleep(30);
