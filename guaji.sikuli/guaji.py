@@ -6,11 +6,8 @@ def gameStart():
 
 def login():
     print 'login';
-    if not exists("1574095716601.png", 10):
-        print 'no login icon';
-        openApp('D:\wow\Battle.net\Battle.net.exe');
-        sleep(20);
     click("1574095716601.png", 20);
+    sleep(30); 
     print 'login success';
     return;
 
@@ -22,8 +19,6 @@ def reconnect():
 
 def logout():
     print 'logout';
-    exists("1574095824831.png");
-    sleep(1);
     type(Key.ESC);
     sleep(1);
     type(Key.ESC);
@@ -41,14 +36,14 @@ def guaji():
 while True:
     if exists("1574096829952.png", 5):
         guaji();
-    elif exists("1574596348467.png", 5):
-        sleep(30);
-        print('in the line...');
     elif exists("1574096724785.png", 5):
         gameStart();
     elif exists("1574095824831.png", 5):
         logout();
     elif exists("1665894407351.png", 5):
         reconnect();
-    else:
+    elif exists("1574095716601.png", 5):
         login();
+    else:
+        sleep(30);
+        print 'go on';
