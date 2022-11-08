@@ -96,6 +96,8 @@
     <span class="skw">type</span>(Key.ESC);
     <span class="skw">sleep</span>(<span class="dig">1</span>);
     <span class="skw">type</span>(Key.ESC);
+    <span class="skw">sleep</span>(<span class="dig">1</span>);
+    <span class="skw">type</span>(Key.ESC);
     <span class="skw">sleep</span>(<span class="dig">3</span>);
     <span class="kw">return</span>;
 
@@ -110,15 +112,22 @@
         guaji();
     <span class="kw">elif</span> exists(<img src="1574096724785.png" />, <span class="dig">5</span>):
         gameStart();
-    <span class="kw">elif</span> exists(<img src="1574095824831.png" />, <span class="dig">5</span>):
-        logout();
+    <span class="kw">elif</span> exists(<img src="1667632021664.png" />, <span class="dig">5</span>):
+        <span class="skw">click</span>(<img src="1667632021664.png" />);
+        <span class="skw">sleep</span>(<span class="dig">3</span>);
+    <span class="kw">elif</span> exists(<img src="1667929312740.png" />, <span class="dig">5</span>):
+        <span class="skw">click</span>(<img src="1667929312740.png" />,<span class="dig">5</span>);
+        <span class="skw">sleep</span>(<span class="dig">3</span>);
+    <span class="kw">elif</span> exists(<img src="1667632055950.png" />, <span class="dig">5</span>):
+        <span class="kw">print</span> <span class="str">'rl'</span>;
+        <span class="skw">click</span>(<img src="1667632055950.png" />);
+        <span class="skw">sleep</span>(<span class="dig">10</span>);
     <span class="kw">elif</span> exists(<img src="1665894407351.png" />, <span class="dig">5</span>):
         reconnect();
     <span class="kw">elif</span> exists(<img src="1574095716601.png" />, <span class="dig">5</span>):
         login();
     <span class="kw">else</span>:
-        <span class="skw">sleep</span>(<span class="dig">30</span>);
-        <span class="kw">print</span> <span class="str">'go on'</span>;
+        <span class="skw">sleep</span>(<span class="dig">10</span>);
 </pre>
 </body>
 </html>
